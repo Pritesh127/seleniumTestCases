@@ -1,0 +1,20 @@
+package com.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginTest {
+	
+	WebDriver driver;
+	public void verifyLoginWithInvalidCredentials()
+	{
+		driver=new ChromeDriver();
+		driver.get(" https://tutorialsninja.com/demo");
+		driver.findElement(By.xpath("//span[text()='My Account']")).click();
+		driver.findElement(By.linkText("Login")).click();
+		
+		
+	}
+
+}
